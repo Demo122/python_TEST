@@ -28,6 +28,16 @@ if __name__ == '__main__':
     storage = {}
     init(storage)
     store(storage,'A B C')
-    people = lookup(storage,'middle','B')
+    people = lookup(storage, 'middle', 'B')
     print(people)
+
+
+    name = ''
+    while not name or name.isspace():
+        name = input('please enter you want store name: ')
+    store(storage,name)
+    people2 = lookup(storage,'middle','')
+    print(people2)
+    print(storage)
+
 
