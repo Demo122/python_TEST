@@ -38,6 +38,10 @@ def store2(data,*full_names):
             else:
                 data[label][name] = [full_name]
 
+def print_params(**params):
+    #**用于收集关键字参数
+    print(params)
+
 
 if __name__ == '__main__':
     storage = {}
@@ -47,18 +51,23 @@ if __name__ == '__main__':
     print(people)
 
 
-    name = ''
-    while not name or name.isspace():
-        name = input('please enter you want store name: ')
-    store(storage,name)
-    people2 = lookup(storage,'middle','')
-    print(people2)
-    print(storage)
+    # name = ''
+    # while not name or name.isspace():
+    #     name = input('please enter you want store name: ')
+    # store(storage,name)
+    # people2 = lookup(storage,'middle','')
+    # print(people2)
+    # print(storage)
 
     d={}
     init(d)
     store2(d,'Luck Skywalker','Anakin Skywalker')
     people3 = lookup(d,'last','Skywalker')
     print(people3)
+
+    #测试 ** ,收集关键字参数放在一个字典
+    print_params(name='jack',age='18')
+    # {'name': 'jack', 'age': '18'}
+
 
 
