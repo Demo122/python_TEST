@@ -56,7 +56,7 @@ d['spam'] = 1
 it1 = ('spam',0) in it
 print(it1) #False
 
-#keys返回一个字典视图,其中只包含键
+#keys返回一个字典视图,其中只包含键包含重复的值
 print(d.keys()) # dict_keys(['title', 'url', 'spam'])
 
 #pop可用于获取与指定键相关联的值，并将该键--值从字典中删除
@@ -80,7 +80,7 @@ ddd.update(d)
 print(ddd) # {'name': 'N/A', 'age': None, 'title': 'Python Web Site', 'url': 'http：//www.python.org', 'spam': 1}
 
 
-#values返回字典的值视图，包含重复的值
+#values返回字典的值视图，
 d2 = {'x':0,'q':1,'e':2,'r':1}
 print(d2.values()) # dict_values([0, 1, 2, 1])
 
