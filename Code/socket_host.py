@@ -8,9 +8,9 @@
 import socket
 
 s = socket.socket()
-host = socket.gethostname()
-port = 1234
-s.bind((host, port))
+#host = socket.gethostname()
+port = 9999
+s.bind(('74.120.172.167', port))
 
 s.listen(5)
 

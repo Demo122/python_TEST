@@ -7,7 +7,7 @@
 import socket
 
 s = socket.socket()
-host = socket.gethostname()
-port = 1234
-s.connect((host, port))
+#host = socket.gethostname()
+port = 9999
+s.connect(('74.120.172.167', port))
 print(s.recv(1024).decode('utf-8'))
