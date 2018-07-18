@@ -11,3 +11,6 @@ s = socket.socket()
 port = 9999
 s.connect(('74.120.172.167', port))
 print(s.recv(1024).decode('utf-8'))
+message=input("what message you want send to server? :")
+s.send(message.encode('utf-8'))
+print(s.recv(1024).decode('utf-8'))
