@@ -5,7 +5,13 @@
 @time:2018/7/17 16:36
 """
 
-import socket
+import socket,threading
+
+def do_send_recv(c,addr):
+    print("connection from %s: %s",addr)
+    c.send("欢迎连接第一个服务器".encode('utf-8'))
+    data=c.recv(1024)
+    c.send(("Hello, %s!"%data.decode('utf-8')).encode('utf-8'))
 
 s = socket.socket()
 #host = socket.gethostname()
@@ -16,7 +22,5 @@ s.listen(5)
 
 while True:
     c, addr = s.accept()
-    print('Got connection from', addr)
-    msg = '欢迎访问菜鸟教程！'
-    c.send(msg.encode('utf-8'))
-    c.close()
+    t=threading.Thread(target=do_send_recv,args=(c,addr))
+    t.start()
