@@ -41,7 +41,7 @@ print(f.getvalue())  #getvalue用于获得写入后的str
 
 
 
-from io import StringIO
+
 f=StringIO('Hello!\nHi!\nI love you!')
 while True:
     s=f.readline()
