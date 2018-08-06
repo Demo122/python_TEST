@@ -1,0 +1,2 @@
+环境为python3.4
+目前py2exe只支持到python3.4
